@@ -31,4 +31,5 @@ However, IOS implements strict rules on background service, therefore a backgrou
 Due to the above-mentioned limitations, automation for the reporting offline fire report is limited and manual assistance is required.
 
 When the background service is about to be terminated, the background service notifies the user via local notifications, the fire has not been reported during the allocated time and the user must manually report the fire when there is network access.
+
 ![](ReadMeImages/FireReporter-Connectivity_NotAvailable_IOS.png)
