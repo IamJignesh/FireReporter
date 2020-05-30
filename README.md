@@ -13,3 +13,8 @@ The first use case is when the network connectivity is available, at this stage 
 
 ### Offline Support on Android:
 When the there is no network access:
+* The Report Data is stored in the local Database
+* A “Foreground service” is started which monitors the connectivity.
+* As the Connectivity changes from not connected to connected, the foreground service responds to the event and starts sending the pending reports.
+* Once all the reports are reported the service is terminated.
+![](ReadMeImages/FireReporter-Connectivity_NotAvailable-Andriod.png)
