@@ -17,4 +17,18 @@ When the there is no network access:
 * A “Foreground service” is started which monitors the connectivity.
 * As the Connectivity changes from not connected to connected, the foreground service responds to the event and starts sending the pending reports.
 * Once all the reports are reported the service is terminated.
-![](ReadMeImages/FireReporter-Connectivity_NotAvailable-Andriod.png)
+![](ReadMeImages/FireReporter-Connectivity_NotAvailable_Andriod.png)
+
+### Offline Support on Android:
+When the there is no network access:
+* The Report Data is stored in the local Database
+* A “Background service” is started which monitors the connectivity.
+* As the Connectivity changes from not connected to connected, the Background service responds to the event and starts sending the pending reports.
+* Once all the reports are reported the service is terminated.
+
+However, IOS implements strict rules on background service, therefore a background service has limited time to execute. When the time allocated to the background service is over, the service is terminated by the IOS.
+
+Due to the above-mentioned limitations, automation for the reporting offline fire report is limited and manual assistance is required.
+
+When the background service is about to be terminated, the background service notifies the user via local notifications, the fire has not been reported during the allocated time and the user must manually report the fire when there is network access.
+![](ReadMeImages/FireReporter-Connectivity_NotAvailable_IOS.png)
