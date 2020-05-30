@@ -19,7 +19,7 @@ When the there is no network access:
 * Once all the reports are reported the service is terminated.
 ![](ReadMeImages/FireReporter-Connectivity_NotAvailable_Andriod.png)
 
-### Offline Support on Android:
+### Offline Support on IOS:
 When the there is no network access:
 * The Report Data is stored in the local Database
 * A “Background service” is started which monitors the connectivity.
